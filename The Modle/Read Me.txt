@@ -1,0 +1,141 @@
+-----------------------------------------------------
+-----------------------------------------------------
+1. Introduction and Understanding the Dataset
+
+
+This dataset contains extensive health information for 2,149 patients, each uniquely identified with IDs ranging from 4751 to 6900. The dataset includes demographic details, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, and a diagnosis of Alzheimer's Disease. It is ideal for researchers and data scientists looking to explore factors associated with Alzheimer's, develop predictive models, and conduct statistical analyses.
+
+What's Alzheimer's Disease ?
+Alzheimer's Disease is a brain illness that slowly destroys memory and thinking skills. It is the most common cause of dementia, which makes it hard for people to remember things, think clearly, and take care of themselves. The disease happens because of harmful changes in the brain, like the buildup of bad proteins. Symptoms typically begin with mild memory loss and confusion, eventually progressing to severe cognitive impairment and loss of the ability to perform daily activities. Risk factors include age, family history, genetics, lifestyle, and certain medical conditions. There is currently no cure, but treatments can help manage symptoms and improve quality of life.
+
+Now lets understand each Columns:
+-----------------------------------------------------
+Demographic Details
+-----------------------------------------------------
+- PatientID: A unique identifier assigned to each patient (4751 to 6900).
+- Age: The age of the patients ranges from 60 to 90 years.
+- Gender: Gender of the patients, where 0 represents Male and 1 represents Female.
+- Ethnicity: The ethnicity of the patients, coded as follows: 0: Caucasian 1: African American 2: Asian 3: Other
+- EducationLevel: The education level of the patients, coded as follows: 0: None 1: High School 2: Bachelor's 3: Higher
+-----------------------------------------------------
+Lifestyle Factors
+-----------------------------------------------------
+- BMI: Body Mass Index of the patients, ranging from 15 to 40.
+- Smoking: Smoking status, where 0 indicates No and 1 indicates Yes.
+- AlcoholConsumption: Weekly alcohol consumption in units, ranging from 0 to 20.
+- PhysicalActivity: Weekly physical activity in hours, ranging from 0 to 10.
+- DietQuality: Diet quality score, ranging from 0 to 10.
+- SleepQuality: Sleep quality score, ranging from 4 to 10.
+-----------------------------------------------------
+Medical History
+-----------------------------------------------------
+- FamilyHistoryAlzheimers: Family history of Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
+- CardiovascularDisease: Presence of cardiovascular disease, where 0 indicates No and 1 indicates Yes.
+- Diabetes: Presence of diabetes, where 0 indicates No and 1 indicates Yes.
+- Depression: Presence of depression, where 0 indicates No and 1 indicates Yes.
+- HeadInjury: History of head injury, where 0 indicates No and 1 indicates Yes.
+- Hypertension: Presence of hypertension, where 0 indicates No and 1 indicates Yes.
+-----------------------------------------------------
+Clinical Measurements
+-----------------------------------------------------
+- SystolicBP: Systolic blood pressure, ranging from 90 to 180 mmHg.
+- DiastolicBP: Diastolic blood pressure, ranging from 60 to 120 mmHg.
+- CholesterolTotal: Total cholesterol levels, ranging from 150 to 300 mg/dL.
+- CholesterolLDL: Low-density lipoprotein cholesterol levels, ranging from 50 to 200 mg/dL.
+- CholesterolHDL: High-density lipoprotein cholesterol levels, ranging from 20 to 100 mg/dL.
+- CholesterolTriglycerides: Triglycerides levels, ranging from 50 to 400 mg/dL.
+-----------------------------------------------------
+Cognitive and Functional Assessments
+-----------------------------------------------------
+- MMSE: Mini-Mental State Examination score, ranging from 0 to 30. Lower scores indicate cognitive impairment.
+- FunctionalAssessment: Functional assessment score, ranging from 0 to 10. Lower scores indicate greater impairment.
+- MemoryComplaints: Presence of memory complaints, where 0 indicates No and 1 indicates Yes.
+- BehavioralProblems: Presence of behavioral problems, where 0 indicates No and 1 indicates Yes.
+- ADL: Activities of Daily Living score, ranging from 0 to 10. Lower scores indicate greater impairment.
+-----------------------------------------------------
+Symptoms
+-----------------------------------------------------
+- Confusion: Presence of confusion, where 0 indicates No and 1 indicates Yes.
+- Disorientation: Presence of disorientation, where 0 indicates No and 1 indicates Yes.
+- PersonalityChanges: Presence of personality changes, where 0 indicates No and 1 indicates Yes.
+- DifficultyCompletingTasks: Presence of difficulty completing tasks, where 0 indicates No and 1 indicates Yes.
+- Forgetfulness: Presence of forgetfulness, where 0 indicates No and 1 indicates Yes.
+-----------------------------------------------------
+Target Variable
+-----------------------------------------------------
+- Diagnosis: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
+-----------------------------------------------------
+Confidential Information
+-----------------------------------------------------
+- DoctorInCharge: This column contains confidential information about the doctor in charge, with "XXXConfid" as the value for all patients.
+-----------------------------------------------------
+-----------------------------------------------------
+2. Importing all Essential Dependencies
+-----------------------------------------------------
+-----------------------------------------------------
+3. Loading Dataset into DataFrame
+-----------------------------------------------------
+-----------------------------------------------------
+4. Exploratory Data Analysis (EDA)
+We will first check if there's the need of Data Cleaning and Data Preprocessing by checking the shape, Null or missing values, duplicates, Outliers, Imbalance, etc then we will do proper Information extraction by doing Visualization using Matplotlib, Seboarn and Plotly
+-----------------------------------------------------
+4.1 Quick Analysis
+-----------------------------------------------------
+4.2 Visualization and Deep Analysis
+-----------------------------------------------------
+4.3 CONCLUSIONS of EDA:
+-----------------------------------------------------
+ Machine Learning
+-----------------------------------------------------
+- The Dataset is pretty small with over 2k datas but 33 (Useful) Features
+- No Data Cleaning is required since there is no Missing values, Duplicates, Outliers nor any Wrong formatted values
+- There are no Text Categorical columns meaning no Encoding is needed either
+- There are Non-Binary Numerical columns which needed to be Scaled
+- There is a Moderate Imbalance in the dataset which need to be handled
+- Most of the columns are more of a Uniform Distribution rather than Normal (Gaussian) Distribution
+- Feature Engineering is needed for Medical History columns as they are more impactful in predicting the disease
+- Cognitive and Functional Assessments columns scores are important features for predicting the disease
+- See if we can do some Feature Engineering on Symptoms columns to increase their contribution in predicting the disease
+-----------------------------------------------------
+ Analysis Conclusions
+-----------------------------------------------------
+- Alzheimer's Disease usually develops in middle or late life, with the average age of diagnosis being 70-75 years old and by age 85, the risk reaches nearly 50%.
+- 75% of patients are African American.
+- Adults with a BMI of 25.0–29.9 in mid-life (ages 45–55) have a higher chance of developing Alzheimer's disease or dementia later in life (ages 65 and older). Adults - with a BMI of more than 30.0 in mid-life have an even higher risk of developing Alzheimer's disease
+- Smoking is responsible for 14% of AD cases worldwide. Smoking can increase the risk of AD in a number of ways
+- Most Patients who are diagnosed have low physical activities
+- Diet quality is a critical factor in managing Alzheimer's Disease (AD) and potentially reducing the risk of developing it
+- Sleep quality is a crucial aspect of managing Alzheimer's Disease (AD) and can significantly impact cognitive function, overall health, and the progression of the disease
+- 32% Percent of patients who have a family history of the disease have also developed it Cardiovascular disease is related to Alzheimer's disease because they share several risk factors and underlying mechanisms. Poor cardiovascular health, such as high blood pressure, high cholesterol, obesity, diabetes, and smoking, can increase the risk of developing Alzheimer's. 40% of the patients with Cardiovascular Disease have developed Alzheimer's
+- 30% Patients with Diabetes are diagnosed with Alzheimer Depression is linked to an increased risk of developing Alzheimer's disease. it is considered a significant risk factor as 34% Patients who have Depression are diagnosed with Alzheimer
+- 32% Patients with Head injury have Alzheimer, People who have had a head injury are more likely to develop Alzheimer's disease. Head injuries, especially severe or repeated ones, can damage brain cells and can increase the risk of cognitive decline and dementia, including Alzheimer's disease Hypertension is also a significant risk factor for Alzheimer's disease with 39% patients with Hypertension are diagnosed with the disease
+- 63-65% Patients who have Presence of memory complaints also are Diagnosed with Alzheimer's Disease- Patients with Behavioral Problems are 60% more likely to be Diagnosed with Alzheimer
+-----------------------------------------------------
+-----------------------------------------------------
+5. Data Preprocessing
+-----------------------------------------------------
+5.1 Data Cleaning
+-----------------------------------------------------
+5.2 Feature Engineering
+-----------------------------------------------------
+-----------------------------------------------------
+6. Machine Learning
+-----------------------------------------------------
+6.1 Data Splitting
+-----------------------------------------------------
+6.2 Oversampling using SMOTE
+-----------------------------------------------------
+6.3 Model Selection and Hyperparameters tuning
+-----------------------------------------------------
+6.4 Artificial Neural Network (ANN)
+-----------------------------------------------------
+6.5 Training and Predicting using Final Model
+-----------------------------------------------------
+6.6 Evaluation on Final Model
+-----------------------------------------------------
+-----------------------------------------------------
+7. Save Model
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
